@@ -29,5 +29,8 @@ export class HeroDetailComponent implements OnInit {
   goback(): void{
     this.location.back();
   }
-
+  save(): void{
+    this.heroService.updataeHero(this.hero)
+      .subscribe( () => this.goback() );
+  }
 }
